@@ -27,3 +27,30 @@ footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px
 @media (max-width: 480px) { header, main, footer { padding-left: 20px; padding-right: 20px; } header { align-items: flex-start; flex-direction: column; gap: 8px; } main { padding-top: 36px; } }
 @media (prefers-color-scheme: dark) { :root { --paper: #18241e; --ink: #edf2eb; --muted: #b7c6bb; --line: #3a4c40; --accent: #92d5ac; --card: #202f26; } }
 @media print { header, nav, footer, .skip { display: none; } body { background: white; color: black; font-size: 11pt; } main { max-width: none; padding: 0; } a { color: inherit; } }
+
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { border-radius: 10px; }
+.hero { margin: 0 0 30px; }
+.tiendas { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 10px; }
+.tienda { display: inline-block; background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; padding: 14px 22px; border-radius: 12px; }
+.pares { display: grid; gap: 12px; margin: 16px 0 30px; }
+.par { display: grid; grid-template-columns: 1fr 1fr; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.par p { margin: 0; padding: 16px 18px; font-size: 17px; line-height: 1.5; }
+.hoy { color: var(--muted); }
+.hoy::before { content: "Otras apps"; display: block; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
+.con { background: #e9f4ed; font-weight: 600; }
+.con::before { content: "Con Apto"; display: block; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.capturas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 30px 0; }
+.capturas img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); }
+.planes, .datos { width: 100%; border-collapse: collapse; font-size: 16px; margin: 10px 0 14px; }
+.planes th, .planes td, .datos th, .datos td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
+.planes th { border-bottom: 2px solid var(--accent); }
+.datos th { width: 34%; color: var(--muted); font-weight: 600; }
+.nota { font-size: 15px; color: var(--muted); }
+.faq details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin: 0 0 10px; }
+.faq summary { cursor: pointer; font-weight: 700; }
+.faq details p { margin: 10px 0 0; color: var(--muted); }
+.migas { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
+footer p:last-child { font-size: 13px; }
+@media (max-width: 720px) { .par { grid-template-columns: 1fr; } .capturas { grid-template-columns: 1fr; max-width: 340px; } }
+@media (prefers-color-scheme: dark) { .con { background: #23392c; } .tienda { color: #10251a; } }
